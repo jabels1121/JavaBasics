@@ -1,4 +1,4 @@
-package collections.map;
+package collections.map.hashmap;
 
 import java.util.*;
 
@@ -26,9 +26,9 @@ public class MapLauncher {
     }
 
     private static void printSet(NavigableSet<WordWrapper> wordWrappers) {
-        for (WordWrapper wordWrapper:
-             wordWrappers) {
-            System.out.println();
+        for (WordWrapper wordWrapper :
+                wordWrappers) {
+            System.out.println(wordWrapper);
         }
     }
 
