@@ -1,7 +1,9 @@
 package javaio;
 
 import java.io.IOException;
+import java.nio.channels.FileChannel;
 import java.nio.file.*;
+import java.util.Iterator;
 
 public class FileUtils {
 
@@ -49,5 +51,34 @@ public class FileUtils {
             Files.delete(filePath);
         }
         return Files.notExists(filePath.toAbsolutePath());
+    }
+
+    public void processDir() throws IOException {
+        Path dir = Paths.get("temp");
+        if (Files.notExists(dir)) {
+            Files.createDirectory(dir);
+        }
+
+        Files.createDirectories(Paths.get(dir + "/a/b/c"));
+        Files.createTempDirectory(dir, "tmp");
+
+        Iterable<Path> rootDirectories = FileSystems.getDefault().getRootDirectories();
+        for (Path rootDirectory : rootDirectories) {
+            System.out.println(rootDirectory);
+        }
+
+        DirectoryStream.Filter<Path> filter = new DirectoryStream.Filter<Path>() {
+            @Override
+            public boolean accept(Path entry) throws IOException {
+                return Files.isDirectory(entry);
+            }
+        };
+
+        try (DirectoryStream<Path> paths = Files.newDirectoryStream(dir, filter)) {
+            for (Path p :
+                    paths) {
+                System.out.println(p);
+            }
+        }
     }
 }
