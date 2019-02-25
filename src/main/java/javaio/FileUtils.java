@@ -1,9 +1,7 @@
 package javaio;
 
 import java.io.IOException;
-import java.nio.channels.FileChannel;
 import java.nio.file.*;
-import java.util.Iterator;
 
 public class FileUtils {
 
