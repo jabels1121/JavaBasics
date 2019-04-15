@@ -8,8 +8,24 @@ interface ElementProcessor<T extends Number> {
 }
 
 @FunctionalInterface
-interface ExecutiveFunction{
+interface Operation {
+
     void process();
+
+    static void measure(Operation func) {
+        long start = new Date().getTime();
+        func.process();
+        long end = new Date().getTime();
+        System.out.println("Time spent: " + (end - start) + " milliseconds.");
+    }
+
+    default Operation combineOperation(Operation that) {
+        return () -> {
+            process();
+            that.process();
+        };
+    }
+
 }
 
 public class LambdaExample {
@@ -35,7 +51,12 @@ public class LambdaExample {
         processElements(intList, x -> Math.pow(x.doubleValue(), 2.2));
         processElements(doubleList, x -> Math.pow(x.doubleValue(), 2.2));
 
-        TimeUtil.measure(() -> {
+        Operation operation1 = () -> Arrays.sort(getRandomArray());
+        Operation operation2 = () -> Arrays.sort(getRandomArray());
+        Operation.measure(operation1.combineOperation(operation2));
+
+
+        Operation.measure(() -> {
             double pow = Math.pow(322323.0001231, 91923.9192);
             System.out.println(pow);
         });
@@ -59,17 +80,6 @@ public class LambdaExample {
             i[k] = r.nextInt(i.length + 1);
         }
         return i;
-    }
-
-    private static final class TimeUtil{
-
-        private static void measure(ExecutiveFunction func) {
-            long start = new Date().getTime();
-            func.process();
-            long end = new Date().getTime();
-            System.out.println("Time spent: " + (end - start) + " milliseconds.");
-        }
-
     }
 
 }
