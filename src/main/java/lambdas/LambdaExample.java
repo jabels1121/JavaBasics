@@ -4,7 +4,7 @@ import java.util.*;
 
 @FunctionalInterface
 interface ElementProcessor<T extends Number> {
-     double process(T element);
+    double process(T element);
 }
 
 @FunctionalInterface

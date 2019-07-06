@@ -71,7 +71,7 @@ public class StreamOverviewMain {
             }
         };
 
-        testStreamGenerator(10,supplier);
+        testStreamGenerator(10, supplier);
     }
 
     private static void testParallelStream() throws IOException {
@@ -91,7 +91,7 @@ public class StreamOverviewMain {
         Stream.iterate(2, e -> e * 2).limit(size).forEach(System.out::println);
     }
 
-    private static <T> void  testStreamGenerator(Integer size, Supplier<T> supplier) {
+    private static <T> void testStreamGenerator(Integer size, Supplier<T> supplier) {
         Stream.generate(supplier)
                 .parallel()
                 .limit(size).forEach(System.out::println);
@@ -176,9 +176,9 @@ public class StreamOverviewMain {
 
     private static void testStreamFromFile() throws IOException {
         Files.lines(Paths.get("words.txt"))
-            .filter(e -> e.length() > 4)
-            .map(String::toUpperCase)
-            .sorted();
+                .filter(e -> e.length() > 4)
+                .map(String::toUpperCase)
+                .sorted();
 
     }
 

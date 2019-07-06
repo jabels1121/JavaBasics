@@ -37,10 +37,10 @@ public class CollectionsRunner {
         List<Card> cardList = new ArrayList<>(deckOfCards);
         Collections.fill(cardList, card);
         //printOutput(cardList);
-        Collections.addAll(cardList, card,card,card);
+        Collections.addAll(cardList, card, card, card);
         Collections.copy(cardList, deckOfCards);
         int frequency = Collections.frequency(cardList, card);
-        System.out.println("Frequency of " +card+" is "+ frequency);
+        System.out.println("Frequency of " + card + " is " + frequency);
 
 
     }

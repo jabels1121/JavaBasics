@@ -1,6 +1,6 @@
 package collections.map.treemap;
 
-public class AverageStudentGrade implements Comparable<AverageStudentGrade>{
+public class AverageStudentGrade implements Comparable<AverageStudentGrade> {
 
     private final String name;
     private final float averageGrade;

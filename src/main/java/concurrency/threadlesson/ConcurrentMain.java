@@ -39,10 +39,10 @@ class SimpleThread extends Thread {
                 Thread.sleep(1000);
 
             } catch (InterruptedException e) {
-                System.out.println(YELLOW+"WARNING - " + currentThread().getName()
+                System.out.println(YELLOW + "WARNING - " + currentThread().getName()
                         + " was interrupted");
             }
-            System.out.println(MAGENTA+"INFO - " + currentThread().getName()
+            System.out.println(MAGENTA + "INFO - " + currentThread().getName()
                     + " - " + i);
         }
     }
@@ -58,10 +58,10 @@ class SimpleRunner implements Runnable {
                 Thread.sleep(1000);
 
             } catch (InterruptedException e) {
-                System.out.println(YELLOW+"WARNING - " + Thread.currentThread().getName()
+                System.out.println(YELLOW + "WARNING - " + Thread.currentThread().getName()
                         + " was interrupted");
             }
-            System.out.println(GREEN+"INFO - Runnable - " + Thread.currentThread().getName()
+            System.out.println(GREEN + "INFO - Runnable - " + Thread.currentThread().getName()
                     + " - " + i);
         }
     }

@@ -1,6 +1,6 @@
 package exceptions;
 
-public class InvalidInputParamException extends RuntimeException{
+public class InvalidInputParamException extends RuntimeException {
 
     public InvalidInputParamException() {
     }

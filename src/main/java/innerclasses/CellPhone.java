@@ -8,7 +8,7 @@ public class CellPhone {
     private RadioModule gsm;
     private AbstractPhoneButton button;
 
-    public interface AbstractPhoneButton{
+    public interface AbstractPhoneButton {
         void click();
     }
 

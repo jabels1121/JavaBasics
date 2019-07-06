@@ -60,16 +60,16 @@ public class Writer {
     public void nioWriteWithBuffer(String fileName) throws IOException {
         Path path = Paths.get(fileName);
         Charset charset = Charset.forName("UTF-8");
-        try (BufferedWriter writer = Files.newBufferedWriter(path, charset)){
+        try (BufferedWriter writer = Files.newBufferedWriter(path, charset)) {
             writer.write(fileName, 0, fileName.length());
         }
     }
 
-    public void nioWriteWithStream(String fileName) throws IOException{
+    public void nioWriteWithStream(String fileName) throws IOException {
         Path path = Paths.get(fileName);
         String str = "File cannot be opened. Program terminates.";
         byte[] bytes = str.getBytes();
-        try(OutputStream out = Files.newOutputStream(path, CREATE, APPEND)) {
+        try (OutputStream out = Files.newOutputStream(path, CREATE, APPEND)) {
             out.write(bytes, 0, bytes.length);
         }
     }
@@ -93,7 +93,7 @@ public class Writer {
         ByteBuffer buffer = ByteBuffer.allocate(10);
         Path path = Paths.get(fileName);
 
-        try (FileChannel openedFile = FileChannel.open(path, READ, WRITE)){
+        try (FileChannel openedFile = FileChannel.open(path, READ, WRITE)) {
             int numBytes = 0;
             while (buffer.hasRemaining() && numBytes != -1) {
                 numBytes = openedFile.read(buffer);

@@ -40,7 +40,7 @@ public class ExceptionHandlingMain {
         } while (continueLoop);
     }
 
-    private static int divide(int numerator, int denominator) throws ArithmeticException, NullPointerException{
+    private static int divide(int numerator, int denominator) throws ArithmeticException, NullPointerException {
         return numerator / denominator;
     }
 

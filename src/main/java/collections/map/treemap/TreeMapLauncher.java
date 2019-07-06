@@ -25,8 +25,8 @@ public class TreeMapLauncher {
 
     private static void printGrades(Map<AverageStudentGrade, Set<SubjectGrade>> grades, boolean printValue) {
         Set<AverageStudentGrade> averageStudentGrades = grades.keySet();
-        for (AverageStudentGrade grade:
-             averageStudentGrades) {
+        for (AverageStudentGrade grade :
+                averageStudentGrades) {
             System.out.println(grade);
             if (printValue) {
                 System.out.println(grades.get(grade));

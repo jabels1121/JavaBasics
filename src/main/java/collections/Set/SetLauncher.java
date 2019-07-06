@@ -16,7 +16,7 @@ public class SetLauncher {
 
         Set<Car> europaCars = new HashSet<>();
         europaCars.add(new Car("Toyota", "Auris", 18));
-        europaCars.add(new Car("VW", "Polo", 15+2));
+        europaCars.add(new Car("VW", "Polo", 15 + 2));
         europaCars.add(new Car("Toyota", "Corolla", 17));
         europaCars.add(new Car("VW", "Golf", 25));
         europaCars.add(new Car("Renault", "Megane", 21));

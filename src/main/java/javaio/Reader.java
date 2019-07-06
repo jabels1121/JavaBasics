@@ -51,10 +51,10 @@ public class Reader {
         }
     }
 
-    public void nioReadFileWithBuffer(String fileName) throws IOException{
+    public void nioReadFileWithBuffer(String fileName) throws IOException {
         Path path = Paths.get(fileName);
         Charset charset = Charset.forName("UTF-8");
-        try(BufferedReader reader = Files.newBufferedReader(path, charset)){
+        try (BufferedReader reader = Files.newBufferedReader(path, charset)) {
             String s;
             while ((s = reader.readLine()) != null) {
                 System.out.println(s);
@@ -64,7 +64,7 @@ public class Reader {
 
     public void nioReadWithStream(String fileName) throws IOException {
         Path path = Paths.get(fileName);
-        try(InputStream in = Files.newInputStream(path)) {
+        try (InputStream in = Files.newInputStream(path)) {
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
             String s;
             while ((s = reader.readLine()) != null) {

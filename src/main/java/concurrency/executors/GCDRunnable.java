@@ -23,8 +23,7 @@ public class GCDRunnable extends Random implements Runnable {
                                 threadDescription + ". The GCD of " + a + " and " + b + " is " + gcd);
                     }
                 }
-            }
-            else System.out.println(BLUE+"Thread was interrupted!");
+            } else System.out.println(BLUE + "Thread was interrupted!");
         }
         System.out.println(BLUE + "Leaving from " + threadDescription + ".");
     }

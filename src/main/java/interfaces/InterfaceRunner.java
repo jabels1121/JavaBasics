@@ -12,6 +12,7 @@ public class InterfaceRunner {
         printDeliveryPrice(fridge);
 
     }
+
     private static void printDeliveryPrice(Pricable del) {
         System.out.println("Delivery price is " + del.calcDeliveryPrice());
         System.out.println("Order price is " + del.calcOrderPrice());

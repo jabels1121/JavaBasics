@@ -57,7 +57,7 @@ public class WaitNotifyExample {
         }
 
         private void produce() throws InterruptedException {
-            for(String s : messages) {
+            for (String s : messages) {
                 synchronized (message) {
                     System.out.println(BLUE + "Producing message: " + s);
                     message.setMessage(s);
@@ -91,7 +91,7 @@ public class WaitNotifyExample {
             while (true) {
                 Thread.sleep(400);
                 synchronized (message) {
-                    System.out.println(RED + "Consuming message: " + updateStringWithFunc(message.getMessage(), e -> ">>> "+e+"!!!"));
+                    System.out.println(RED + "Consuming message: " + updateStringWithFunc(message.getMessage(), e -> ">>> " + e + "!!!"));
                     if (!"DONE.".equals(message.getMessage())) {
                         message.notify();
                         message.wait();

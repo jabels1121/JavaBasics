@@ -29,16 +29,16 @@ public class StackQueueLauncher {
 
         Deque<Integer> ints = new ArrayDeque<>();
 
-        for (int i = 0; i<15; i++) {
+        for (int i = 0; i < 15; i++) {
             ints.offerFirst(i);
         }
 
-        for(int i : ints) {
+        for (int i : ints) {
             System.out.println(i);
         }
 
         System.out.println(ints.removeFirstOccurrence(10));
-        for(int i : ints) {
+        for (int i : ints) {
             System.out.println(i);
         }
     }
@@ -53,7 +53,7 @@ public class StackQueueLauncher {
         bus.push(passenger);
         bus.push(new Passenger("Egor", "Grishatov"));
 
-        System.out.println("Last entered passenger is: " + bus.peek() );
+        System.out.println("Last entered passenger is: " + bus.peek());
     }
 
     private static void queueExample() {
@@ -66,7 +66,7 @@ public class StackQueueLauncher {
 
         Card card = new Card(Card.Suit.CLUBS, Card.Face.King);
         System.out.println("==================\nCardDeck size is: " + cardDeck.size());
-        for (int i = 0; i< 10; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println(cardDeck.peek());
         }
         System.out.println("==================\nCardDeck size is: " + cardDeck.size());
@@ -81,7 +81,7 @@ public class StackQueueLauncher {
     }
 
 
-    public static class Passenger{
+    public static class Passenger {
 
         private static int number;
         private String name;

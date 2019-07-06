@@ -44,7 +44,7 @@ public class ProducerConsumer {
 
         private void produce() throws InterruptedException {
             Random r = new Random();
-            for (int i = 0; i< strings.length; i++) {
+            for (int i = 0; i < strings.length; i++) {
                 queue.put(strings[i]);
                 System.out.println(GREEN + "Producing " + strings[i] + ". Queue size is " + queue.size());
                 Thread.sleep(r.nextInt(3000));
@@ -69,7 +69,7 @@ public class ProducerConsumer {
                 System.out.println(RED + "Consuming " + message + ". Que size is " + queue.size());
                 if (!"DONE".equals(message)) {
                     Thread.sleep(r.nextInt(3000));
-                } else  return;
+                } else return;
             }
         }
     }

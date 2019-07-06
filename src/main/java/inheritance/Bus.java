@@ -10,7 +10,7 @@ public class Bus extends FuelAuto {
         System.out.println("Bus was initialized");
     }
 
-    public void fuelUp(){
+    public void fuelUp() {
         int volume = getTankVolume() - getAvailablePetrol();
         fuelUp(volume);
     }

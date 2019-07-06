@@ -1,6 +1,6 @@
 package inheritance;
 
-public class ElectricCar extends Auto{
+public class ElectricCar extends Auto {
 
     private int batteryVolume;
     private int passengersNumber;
@@ -11,7 +11,7 @@ public class ElectricCar extends Auto{
         this.passengersNumber = passengersNumber;
     }
 
-    private void charge(){
+    private void charge() {
         System.out.println("Battery is charging");
     }
 

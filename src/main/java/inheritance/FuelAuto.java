@@ -1,6 +1,6 @@
 package inheritance;
 
-public abstract class FuelAuto extends Auto{
+public abstract class FuelAuto extends Auto {
 
     private int tankVolume;
     private int availablePetrol;
@@ -27,7 +27,7 @@ public abstract class FuelAuto extends Auto{
         this.availablePetrol = availablePetrol;
     }
 
-    public void fuelUp(int fuelVolume){
+    public void fuelUp(int fuelVolume) {
         availablePetrol += fuelVolume;
         System.out.println("Adding " + getEngine().getEngineType());
     }

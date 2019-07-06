@@ -85,7 +85,7 @@ public class HigherOrderFunctionExample {
     }
 
     private static <T> void processList(List<T> elements, Consumer<T> consumer) {
-        for (T e: elements) {
+        for (T e : elements) {
             consumer.accept(e);
         }
     }

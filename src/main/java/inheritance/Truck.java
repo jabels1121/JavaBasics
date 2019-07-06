@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Truck extends FuelAuto{
+public class Truck extends FuelAuto {
 
     private int cargoWeight;
 
@@ -18,11 +18,11 @@ public class Truck extends FuelAuto{
         this.cargoWeight = cargoWeight;
     }
 
-    public void load(){
+    public void load() {
         System.out.println("Cargo loaded");
     }
 
-    public void unLoad(){
+    public void unLoad() {
         System.out.println("Cargo unloaded");
     }
 

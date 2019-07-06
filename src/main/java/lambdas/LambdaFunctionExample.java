@@ -17,8 +17,8 @@ public class LambdaFunctionExample {
         List<Employee> employees = new ArrayList<>();
         employees.add(new Employee("Alex", "Black", 50000));
         employees.add(new Employee("John", "White", 75000));
-        employees.add(new Employee("Sam", "Brown",  80000));
-        employees.add(new Employee("Tony", "Grey",  90000));
+        employees.add(new Employee("Sam", "Brown", 80000));
+        employees.add(new Employee("Tony", "Grey", 90000));
 
         List<Person> people = new ArrayList<>();
         people.add(new Person("Alex", "Smith", 25));
@@ -27,11 +27,11 @@ public class LambdaFunctionExample {
         people.add(new Person("Tony", "Grey", 34));
 
 
-    // Predicate
-        System.out.println(findMatch(employees, e -> e.getSalary() >=  80000));
+        // Predicate
+        System.out.println(findMatch(employees, e -> e.getSalary() >= 80000));
         System.out.println(findMatch(people, p -> p.getAge() >= 32));
 
-    // Function
+        // Function
         System.out.println("Total sum: " + calcSum(employees, Employee::getSalary));
         System.out.println("Total age: " + calcSum(people, Person::getAge));
 

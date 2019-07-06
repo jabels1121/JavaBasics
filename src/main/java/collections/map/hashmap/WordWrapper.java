@@ -2,7 +2,7 @@ package collections.map.hashmap;
 
 import java.util.Objects;
 
-public final class WordWrapper implements Comparable<WordWrapper>{
+public final class WordWrapper implements Comparable<WordWrapper> {
 
     private final String word;
     private final Integer count;
@@ -22,8 +22,12 @@ public final class WordWrapper implements Comparable<WordWrapper>{
 
     @Override
     public int compareTo(WordWrapper thatWord) {
-        if (count < thatWord.getCount()) {return -1;}
-        if (count > thatWord.getCount()) {return 1;}
+        if (count < thatWord.getCount()) {
+            return -1;
+        }
+        if (count > thatWord.getCount()) {
+            return 1;
+        }
         return word.compareTo(thatWord.getWord());
     }
 

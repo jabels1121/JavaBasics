@@ -22,7 +22,7 @@ public class Engine {
         this.volume = volume;
         this.engineType = engineType;
         this.power = power;
-        for (int i = 0; i< 5; i++) {
+        for (int i = 0; i < 5; i++) {
             this.pistons.add(new Piston(0.3, i));
         }
     }
